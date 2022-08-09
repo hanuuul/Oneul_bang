@@ -1,0 +1,94 @@
+body{
+    background-color: #fafafa;
+    height: 100%;
+}
+
+.main-container{
+    display: flex; /*수평수직 방향지정 가능*/
+    flex-direction: column; /* row: 수평 기본*/
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    min-height: 100vh; 
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+
+.logo{
+    width: 110px;
+    margin-bottom: 26px;
+    padding-left: 56px;
+    position: relative;
+}
+.logo::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0; top: 3px;
+    width: 54px;
+    height: 54px;
+    background: url(../images/logo_icon.png) center;
+    background-size: 100%;
+}
+.logo img{
+    width: 100%;
+    
+}
+
+.signin{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.signin div{
+    width: 100%;
+}
+.signin div:first-child input{
+    border-radius: 4px 4px 0 0;
+}
+.signin div:nth-child(2) input{
+    border-radius: 0 0 4px 4px;
+    border-top: none;
+}
+.signin div input{
+    width: 100%;
+    height: 50px;
+    
+    border: 1px solid #dbdbdb;
+    padding: 13px 15px 14px;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 21px;
+}
+.signin div input::placeholder{
+    color: #a1a1a1;
+}
+.signin button{
+    height: 52px;
+    margin: 20px 0;
+    background-color: #35c5f0;
+    color: #fff;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+.actions{
+    display: flex;
+    justify-content: center;
+}
+.actions a{
+    color: #424242;
+}
+.actions a:last-child{
+    margin-left: 20px;
+}
